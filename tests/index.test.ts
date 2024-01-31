@@ -106,7 +106,7 @@ describe("Fibonacci sequence.", () => {
 	  });
    });
    test("Should be an array of first 10 Fibonacci sequence.", () => {
-	  let fibMax10 = new Fib(45);
+	  let fibMax10 = new Fib(10);
 	  let fibMax10Arr = Array.from(fibMax10);
 	  expect(fibMax10Arr).toEqual(seq);
    });
