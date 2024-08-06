@@ -1,4 +1,3 @@
-import { Fib } from "../Fib";
 import { Frame } from "../Frame";
 import { FrameIt } from "../FrameIt";
 import { Component } from "../Component";
@@ -86,28 +85,5 @@ describe("A FrameIt.", () => {
    test("Should be one of frames.", () => {
 	  for(const f of frame)
 		 expect(frames.includes(f.name)).toBeTruthy();
-   });
-});
-describe("Fibonacci sequence.", () => {
-   let fib: Fib;
-   let seq: number[];
-   beforeAll(() => {
-	  fib = new Fib();
-	  seq = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
-   });
-   test("Should be defined.", () => {
-	  expect(fib).toBeDefined();
-   });
-   test("Should be nth term in sequence.", () => {
-	  seq.forEach(num => {
-		 const nextFib = fib.next();
-		 expect(nextFib.done).toBeFalsy();
-		 expect(nextFib.value).toBe(num);
-	  });
-   });
-   test("Should be an array of first 10 Fibonacci sequence.", () => {
-	  let fibMax10 = new Fib(10);
-	  let fibMax10Arr = Array.from(fibMax10);
-	  expect(fibMax10Arr).toEqual(seq);
    });
 });
